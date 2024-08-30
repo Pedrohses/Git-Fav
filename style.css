@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --hue: 194;
+    --txt-default: hsl(240, 9%, 89%);
+    --odd-row: hsl(var(--hue), 37%, 7%);
+    --even-row: hsl(var(--hue), 47%, 10%);
+    --table-contour-color: hsl(var(--hue), 31%, 42%);
+    --thead-color: hsl(var(--hue), 72%, 13%);
+    --form-button: hsl(var(--hue), 91%, 25%);
+    --bg-input: hsl(var(--hue), 65%, 7%);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    background: #000000;
+    color: var(--txt-default);
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.app {
+    max-width: 112rem;
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11.5rem;
+    margin-bottom: 8.7rem;
+}
+
+header form {
+    display: flex;
+    width: 64rem;
+    gap: .8rem;
+}
+
+header form input {
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+    background: var(--bg-input);
+}
+
+header form input::placeholder {
+    padding: 1.6rem;
+    align-items: start;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+
+header form button {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    background-color: var(--form-button);
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    padding: 1.2rem 3.2rem;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+/* table */
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--table-contour-color);
+    border-radius: .5rem;
+}
+
+thead {
+    background: var(--thead-color);
+}
+
+table th {
+    padding: 1.6rem;
+    text-align: start;
+}
+
+td {
+    padding: 1.6rem;
+}
+
+table tbody {
+  display: block;
+  width: 100%;
+  max-height: 58rem;
+  overflow-y: auto;
+}
+
+thead, tr {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+tbody tr:nth-child(odd) {
+    background: var(--odd-row);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--even-row);
+    border: 1px solid var(--table-contour-color);
+}
+
+.user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+tbody tr td img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+a {
+    line-height: 160%;
+    text-decoration: none;
+    color: var(--txt-default);
+}
+
+tr button {
+    border: none;
+    background: none;
+    color: red;
+
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Estilo do scroll */
+::-webkit-scrollbar {
+    width: 0px;
+}
