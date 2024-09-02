@@ -16,6 +16,7 @@
     --thead-color: hsl(var(--hue), 72%, 13%);
     --form-button: hsl(var(--hue), 91%, 25%);
     --bg-input: hsl(var(--hue), 65%, 7%);
+    --isEmpty-text-color: hsl(var(--hue), 4%, 32%);
 }
 
 .sr-only {
@@ -142,7 +143,7 @@ tbody tr:nth-child(even) {
     gap: 1.6rem;
 }
 
-tbody tr td img {
+tbody tr td.user img {
     width: 5rem;
     height: 5rem;
 
@@ -170,4 +171,25 @@ tr button {
 /* Estilo do scroll */
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+/* Lista vazia */
+
+.isEmpty {
+    height: 58rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--isEmpty-text-color);
+}
+
+.isEmpty img {
+    width: 13.2rem;
+    height: 12.5rem;
+}
+
+.hidden {
+    display: none;
 }
