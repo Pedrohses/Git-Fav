@@ -14,7 +14,7 @@
     --even-row: hsl(var(--hue), 47%, 10%);
     --table-contour-color: hsl(var(--hue), 31%, 42%);
     --thead-color: hsl(var(--hue), 72%, 13%);
-    --form-button: hsl(var(--hue), 91%, 25%);
+    --search-button: hsl(var(--hue), 91%, 25%);
     --bg-input: hsl(var(--hue), 65%, 7%);
     --isEmpty-text-color: hsl(var(--hue), 4%, 32%);
 }
@@ -53,31 +53,32 @@ header {
     margin-bottom: 8.7rem;
 }
 
-header form {
+header .search {
     display: flex;
     width: 64rem;
     gap: .8rem;
 }
 
-header form input {
+header .search input {
     width: 100%;
     border: none;
     border-radius: .5rem;
     background: var(--bg-input);
+    color: white;
+    padding-left: 1.6rem;
 }
 
-header form input::placeholder {
-    padding: 1.6rem;
+header .search input::placeholder {
     align-items: start;
     font-family: sans-serif;
     font-size: 1.6rem;
 }
 
-header form button {
+header .search button {
     display: flex;
     align-items: center;
     gap: .8rem;
-    background-color: var(--form-button);
+    background-color: var(--search-button);
     color: white;
     border: none;
     border-radius: .5rem;
@@ -175,9 +176,10 @@ tr button {
 
 /* Lista vazia */
 
-.isEmpty {
+.isEmpty td {
     height: 58rem;
     display: flex;
+    gap: 6rem;
     align-items: center;
     justify-content: center;
     font-size: 4rem;
@@ -185,11 +187,7 @@ tr button {
     color: var(--isEmpty-text-color);
 }
 
-.isEmpty img {
+.isEmpty td img {
     width: 13.2rem;
     height: 12.5rem;
-}
-
-.hidden {
-    display: none;
 }
